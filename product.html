@@ -398,6 +398,142 @@
         </div>
       </div>
     </header>
+    <nav>
+      <style>
+  nav {
+    direction: ltr;
+    position: fixed;
+    background: #fff;
+    left: 0;
+    top: 0;
+    width: 30%;
+    z-index: 99;
+    padding: 10px;
+    overflow-y:scroll;
+    display: block;
+      -webkit-transition: opacity .5s ease-in;
+      -moz-transition: opacity .51s ease-in;
+      -o-transition: opacity .51s ease-in;
+      transition: opacity .51s ease-in;
+      opacity: 0; 
+      height: 0;
+      overflow: hidden;
+  }
+  
+  .nav_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  .nav_header span {
+    font-size: 2rem;
+  }
+  .x{
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  hr{
+  
+    background: #ccc;
+    height: 2px;
+    outline: none;
+    border: none;
+  }
+  .nav_img{
+    width: 80px;
+    height: 80px;
+    background: #717171;
+  }.nav_card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    
+  }
+  #menuX ,.x{
+    
+  padding: 0 5px ;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  #menuX:hover,.x:hover{
+    background: #bbb;
+  }
+  .total{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+  }#total{
+    font-weight: bold;
+  } 
+  .nav_button {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 1rem;
+  }
+  .nav_button button{
+    background: #ba1e68;
+    color: #fff ;
+    padding: .5rem .8rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  
+      </style>
+      <div class="nav_container">
+        <div class="nav_header">
+          <h2>MY CART</h2>
+          <span id="menuX">&times;</span>
+          
+          
+        </div>
+        <br><br><hr>
+        <div class="nav_content">
+          <div class="nav_card">
+            <img src="" alt="" class="nav_img">
+            <div>
+              <h5 class="nav_title">product 1</h5>
+              <span class="nav_prix">1700 DA</span>
+            </div>
+            <span  class="x">&times;</span>
+          </div>
+          <div class="nav_card">
+            <img src="" alt="" class="nav_img">
+            <div>
+              <h5 class="nav_title">product 1</h5>
+              <span class="nav_prix">1700 DA</span>
+            </div>
+            <span  class="x">&times;</span>
+          </div>
+          <div class="nav_card">
+            <img src="" alt="" class="nav_img">
+            <div>
+              <h5 class="nav_title">product 1</h5>
+              <span class="nav_prix">1700 DA</span>
+            </div>
+            <span  class="x">&times;</span>
+          </div>
+        </div>
+        <br>
+        <hr>
+        <div class="total">
+          <span>Total:</span><span id="total">8000دج</span>
+        </div>
+        
+        <hr>
+        <div class="nav_button">
+          <button>View Cart</button>
+          <button>Checkout</button>
+        </div>
+      </div>
+    </nav>
     <section>
       <div class="wrap">
         <div class="df">
@@ -726,7 +862,7 @@
                           d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
                           <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25"  to="360 25 25"  dur="0.6s"  repeatCount="indefinite"> </animateTransform>
                         </path></svg >
-                      <span>إضغط هنا لتأكيد الطلب</span>
+                      <span> <a href="thank.html">إضغط هنا لتأكيد الطلب</a></span>
                     </button>
                   </div>
 
@@ -787,14 +923,31 @@
 
                     <strong class="emphasis _order-total">2900 دج</strong>
                   </li>
+                
                 </ul>
+             
               </div>
+            
             </div>
+            <button class="review " id="review">Add Review</button>
+            <span class="note">(بعد تاكيد الطلبية انت توافق على استخدام رقم هاتفك في تحسين جودة التوصيل بحيث سيتم  معالجته آليا في قاعدة بيانات  لتقييم السلوك الشرائي للزبائن لتحديد ما مدى جدارة وثقة الزبائن في استلام طلبياتهم حيث سيتم مكافاة الزبائن الاوفياء الذين يقومون باستلام طلبياتهم وفقا لما هو متفق عليه والامتناع عن التعامل مع الزبائن الذين يتهربون من استلام طلبياتهم..
+              <a href="#" style="color: #432d7e;">المزيد من التفاصيل</a>
+              ) </span>
+              <style>
+                   .note{
+        color: #717171; 
+        font-size: 1.1rem;
+     
+        padding: 1rem;
+        display: inline-block;
+      }
+              </style>
           </div>
+
         </div>
       </div>
     </section>
-    <style></style>
+  
     <footer class="footer">
       <div class="footer__wrap">
         <div class="wrap">
@@ -950,7 +1103,94 @@
         </div>
       </div>
     </footer>
+    <style>
+      .popup {
+      background: rgba(0, 0, 0, 0.616);
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    
+      }
+      .content_up{
+        border-radius: 15px;
+        width: 35vw;
+        max-width: 600px;
+        background: #fff;
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 1.2rem;
+       position: relative;
+      }
+      .content_up form{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        direction: ltr;
+      
+      }
+      .content_up form input, .content_up form textarea {
+        padding: .6rem ;
+      }
+      .g5{
+        gap: 1rem;
+      }
+      .review{
+        background: #43a071;
+        padding: .5rem .8rem;
+        border-radius: 10px;
+        color: #fff;
+        margin-top: .5rem;
+      }
+    </style>
+ <div class="popup">
+  <div class="content_up">
+<h3>اضف تقييمك</h3>
+<span class="x" id="x">&times;</span>
+<form action="">
+  <input type="text" placeholder="Name" id="">
+  <input type="text"  placeholder="Phone or Email" id="">
+  <textarea rows="4" cols="50" placeholder="Your openion here ..."></textarea>
+  <input type="file">
+ <div class="d-f ai-c  g5 ">
+  <span>Ratings :</span>  <div class="card__rtng">
+    <ul class="d-f ai-c jc-c">
+      <li><div class="rtng imbg"></div></li>
+      <li><div class="rtng imbg"></div></li>
+      <li><div class="rtng imbg"></div></li>
+      <li><div class="rtng imbg"></div></li>
+      <li><div class="rtng imbg rtng--half"></div></li>
+    </ul>
+ </div></div>
+ 
+</form>
+<button class="review">Add Review</button>
+  </div>
+ </div>
+ <script>
+ let menu_button =document.querySelector('.menu_button');
+let menu_x =document.querySelector('#menuX');
+let nav_menu = document.querySelector('nav');
 
-    <script src="main.js"></script>
+menu_button.addEventListener("click",function () {
+ 
+  nav_menu.style.opacity='01';
+  nav_menu.style.display='block';
+  nav_menu.style.height='100%';
+ 
+})
+menu_x.addEventListener("click",function () {
+
+  nav_menu.style.opacity='0';
+  nav_menu.style.display='none';
+
+})
+</script>
+    <script src="product.js"></script>
   </body>
 </html>

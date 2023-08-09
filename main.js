@@ -1,45 +1,48 @@
-var product_side_figure = document.querySelector("#side-figure");
 
-product_side_figure.addEventListener("mousemove", function(e) {
-  var i = this.offsetWidth,
-    s = 800 - i,
-    d = this.getBoundingClientRect(),
-    t = (e.pageX - d.left) * s / i,
-    y = (e.pageY - d.top) * s / i;
+/*******************slider*********** */
+let slideIndex = 1;
+showSlides(slideIndex);
 
-  this.classList.add("zoom-active");
-  this.querySelector("img").style.top = "-" + y + "px";
-  this.querySelector("img").style.left = "-" + t + "px";
-});
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-product_side_figure.addEventListener("mouseleave", function() {
-  this.classList.remove("zoom-active");
-  this.querySelector("img").style.top = "0";
-  this.querySelector("img").style.left = "0";
-});
+function currentSlide(n ) {
+  showSlides(slideIndex = n);
+}
 
-window.addEventListener("sticky-header", function() {
-  if (is_admin_bar) {
-    product_side_figure.classList.add("sticky-header", "admin");
-  } else {
-    product_side_figure.classList.add("sticky-header");
+function showSlides(n) {
+  
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
   }
-});
-
-window.addEventListener("un-sticky-header", function() {
-  if (is_admin_bar) {
-    product_side_figure.classList.remove("sticky-header", "admin");
-  } else {
-    product_side_figure.classList.remove("sticky-header");
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
   }
-});
-/*********************************** */
-var orderResume = document.getElementById("order-resume");
-var orderResumeDetails = document.getElementById("order-resume-details");
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
 
-orderResume.addEventListener("click", function() {
-  this.classList.toggle("active");
-  orderResumeDetails.classList.toggle("active");
-});
-/****************************** */
+/*********************menu button */
+let menu_button =document.querySelector('.menu_button');
+let menu_x =document.querySelector('#menuX');
+let nav_menu = document.querySelector('nav');
 
+menu_button.addEventListener("click",function () {
+ 
+  nav_menu.style.opacity='01';
+  nav_menu.style.display='block';
+  nav_menu.style.height='100%';
+ 
+})
+menu_x.addEventListener("click",function () {
+
+  nav_menu.style.opacity='0';
+  nav_menu.style.display='none';
+
+})

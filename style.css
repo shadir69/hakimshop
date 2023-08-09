@@ -75,7 +75,7 @@ input,select,button {
 }
 
 button {
-    font-size: 0;
+ 
     border: none;
     background-color: transparent;
     padding: 0
@@ -179,7 +179,13 @@ ul{
     background: none;
     margin-right: 1rem;
     cursor: pointer;
- margin-right: 2rem;
+     margin-right: 2rem;
+     padding: 5px;
+     border-radius: 5px;
+}
+.menu_button:hover{
+    background: #ecebeb;
+    
 }
 
 .menu_button>span{
@@ -229,6 +235,21 @@ section{
     margin: 15px 0;
 }.card__rtng li:not(:last-child) {
     margin-left: 5px;
+}/********************** contact us********************/
+.stkw__icon img {
+    margin: 0 auto 15px;
+    width: 72px;
+    height: 72px;
+}.stkw__title {
+    font-weight: 700;
+}.stkw__desc {
+    margin-top: 5px;
+    color: #696969;
+}.stkw__grid {
+    overflow: hidden;
+}.stkw {
+    padding: 30px 0;
+    text-align: center;
 }
 
 /************* footer *******************/
